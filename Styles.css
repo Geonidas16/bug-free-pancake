@@ -501,7 +501,21 @@ footer {
   padding-top: 0px; 
   border: 4px double #2469A6; 
   border-radius: 15px;
-} 
+}
+
+.feedback {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.correct-answer {
+  color: #007800;
+}
+
+.incorrect-answer {
+  color: #b00000;
+}
+
 
 .example_box {
     margin-top: 25px;
