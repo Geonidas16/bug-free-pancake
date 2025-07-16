@@ -41,52 +41,39 @@ quizForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
   let score = 0;
-  const total = 3;
+  const questions = document.querySelectorAll('.quiz-question');
 
-  const answers = {
-    q1: 'b',
-    q2: 'b',
-    q3: 'c'
-  };
+  questions.forEach((question) => {
+    const key = question.dataset.question;
+    const correctValue = question.dataset.answer;
+    const correctText = question.dataset.correctText;
+    const feedback = question.querySelector('.feedback');
+    const selected = quizForm.querySelector(`input[name="${key}"]:checked`);
 
-  const answerText = {
-    q1: '15 days',
-    q2: 'After 10 unexplained absences or patterns',
-    q3: 'A parent provided a medical note'
-  };
-
-  const formData = new FormData(quizForm);
-
-  // Loop through each question
-  for (let key in answers) {
-    const questionBlock = document.querySelector(`.quiz-question[data-question="${key}"]`);
-    const feedback = questionBlock.querySelector('.feedback');
-    const userAnswer = formData.get(key);
-
-    // Clear previous feedback
     feedback.textContent = '';
     feedback.className = 'feedback';
 
-    if (userAnswer === answers[key]) {
+    if (selected && selected.value === correctValue) {
       score++;
       feedback.textContent = '✅ Correct';
       feedback.classList.add('correct-answer');
-    } else if (!userAnswer) {
-      feedback.textContent = `❌ No answer selected. Correct: ${answerText[key]}`;
+    } else if (!selected) {
+      feedback.textContent = `❌ No answer selected. Correct: ${correctText}`;
       feedback.classList.add('incorrect-answer');
     } else {
-      feedback.textContent = `❌ Incorrect. Correct answer: ${answerText[key]}`;
+      feedback.textContent = `❌ Incorrect. Correct answer: ${correctText}`;
       feedback.classList.add('incorrect-answer');
     }
-  }
+  });
 
+  // Show final result
   resultBox.classList.remove('hidden', 'incorrect');
-
-  if (score === total) {
-    resultBox.textContent = `✅ Excellent! You got all ${score} out of ${total} correct.`;
+  if (score === questions.length) {
+    resultBox.textContent = `✅ Excellent! You got all ${score} out of ${questions.length} correct.`;
   } else {
-    resultBox.textContent = `You scored ${score} out of ${total}. Review the feedback above and try again.`;
+    resultBox.textContent = `You scored ${score} out of ${questions.length}. Review the feedback above and try again.`;
     resultBox.classList.add('incorrect');
   }
 });
+
 
