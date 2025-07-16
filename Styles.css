@@ -463,3 +463,13 @@ div.desc {
   text-align: center; } * { box-sizing: border-box; } 
 
 .responsive { padding: 0 6px; float: left; width: 24.99999%; } @media only screen and (max-width: 700px) { .responsive { width: 49.99999%; margin: 6px 0; } } @media only screen and (max-width: 500px) { .responsive { width: 100%; } } .clearfix:after { content: ""; display: table; clear: both; } .underline { text-decoration: underline; } .centered { text-align: center; } .how_much_do_you_know { border-top: 4px double #999; border-bottom: 4px double #999; background: #DEDEDE; padding: 15px; margin-bottom: 15px; } .box_image { width: 40%; margin: 0 auto; } .box_image img { border: 0px; }.latex{background: green; color: white;} fieldset { border: 1px solid #424242; border-radius: 15px; padding: 10px 25px;} legend { width: inherit; padding: 5px 15px; margin-bottom: 0; border: 1px solid #424242; border-radius: 5px; }
+
+.example_box {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    background: #EEE;
+    border: 3px solid #DDD;
+    border-radius: 15px;
+    padding: 15px;
+}
