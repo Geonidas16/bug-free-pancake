@@ -34,11 +34,10 @@ modal.addEventListener('click', (e) => {
   }
 });
 
-// Quiz Logic
 const quizForm = document.getElementById('quizForm');
 const resultBox = document.getElementById('quizResult');
 
-quizForm.addEventListener('submit', function(e) {
+quizForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
   let score = 0;
@@ -50,20 +49,44 @@ quizForm.addEventListener('submit', function(e) {
     q3: 'c'
   };
 
+  const answerText = {
+    q1: '15 days',
+    q2: 'After 10 unexplained absences or patterns',
+    q3: 'A parent provided a medical note'
+  };
+
   const formData = new FormData(quizForm);
 
+  // Loop through each question
   for (let key in answers) {
-    if (formData.get(key) === answers[key]) {
+    const questionBlock = document.querySelector(`.quiz-question[data-question="${key}"]`);
+    const feedback = questionBlock.querySelector('.feedback');
+    const userAnswer = formData.get(key);
+
+    // Clear previous feedback
+    feedback.textContent = '';
+    feedback.className = 'feedback';
+
+    if (userAnswer === answers[key]) {
       score++;
+      feedback.textContent = '✅ Correct';
+      feedback.classList.add('correct-answer');
+    } else if (!userAnswer) {
+      feedback.textContent = `❌ No answer selected. Correct: ${answerText[key]}`;
+      feedback.classList.add('incorrect-answer');
+    } else {
+      feedback.textContent = `❌ Incorrect. Correct answer: ${answerText[key]}`;
+      feedback.classList.add('incorrect-answer');
     }
   }
 
   resultBox.classList.remove('hidden', 'incorrect');
 
   if (score === total) {
-    resultBox.textContent = `✅ Perfect! You scored ${score} out of ${total}.`;
+    resultBox.textContent = `✅ Excellent! You got all ${score} out of ${total} correct.`;
   } else {
-    resultBox.textContent = `You scored ${score} out of ${total}. Review the lesson and try again.`;
+    resultBox.textContent = `You scored ${score} out of ${total}. Review the feedback above and try again.`;
     resultBox.classList.add('incorrect');
   }
 });
+
