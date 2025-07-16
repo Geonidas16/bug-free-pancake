@@ -481,6 +481,42 @@ footer {
     padding-left: 10px;
 }
 
+.sticky_note {
+  position: relative;
+  width: 275px;
+  margin: 4vh auto;
+  padding: 40px;
+  color: #fff;
+  background: #0756a3;
+  background: linear-gradient(
+        to left bottom,
+        transparent 50%,
+        rgba(0, 0, 0, 0.4) 0
+      )
+      no-repeat 100% 0 / 2em 2em,
+    linear-gradient(-135deg, transparent 1.5em, #0756a3 0);
+  -webkit-filter: drop-shadow(20px 30px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(20px 30px rgba(0, 0, 0, 0.1));
+}
+.sticky_note p {
+  color: #fff;
+}
+.sticky_note::before {
+  content: " ";
+  position: absolute;
+  top: 2em;
+  right: 0;
+  background: linear-gradient(
+      to left bottom,
+      transparent 50%,
+      rgba(0, 0, 0, 0.1) 0
+    )
+    100% 0 no-repeat;
+  width: 2em;
+  height: 2em;
+  transform: rotate(180deg);
+}
+
 div.desc { 
   padding: 15px; 
   text-align: center; } * { box-sizing: border-box; } 
