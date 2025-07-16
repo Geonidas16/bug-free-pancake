@@ -449,3 +449,10 @@ footer {
 .quiz-result.hidden {
   display: none;
 }
+
+.guiding_questions { 
+  padding: 15px; 
+  padding-top: 0px; 
+  border: 4px double #2469A6; 
+  border-radius: 15px;
+} 
