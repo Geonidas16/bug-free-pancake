@@ -473,3 +473,17 @@ div.desc {
     border-radius: 15px;
     padding: 15px;
 }
+
+.example_title {
+    padding: 15px;
+    background: #FFF;
+    margin-top: 0px;
+    border: 3px solid #DDD;
+    border-radius: 15px;
+    color: #565A5C;
+    box-shadow: none;
+}
+
+.example_content {
+    padding-left: 10px;
+}
