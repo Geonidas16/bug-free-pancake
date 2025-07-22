@@ -29,7 +29,8 @@ i {
 h1 { 
     color: #0756A3; 
     font-size: 1.9rem; 
-    line-height: 2.3rem; 
+    line-height: 2.3rem;
+    padding-bottom: 5px;
 } 
 h2 { 
     color: #2469A6; 
@@ -56,7 +57,7 @@ h6 {
     line-height: 1rem; 
 } 
 p { 
-  line-height: 1.2;
+  line-height: 1.2rem;
 
 } 
 ol li { 
