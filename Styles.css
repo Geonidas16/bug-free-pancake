@@ -30,8 +30,8 @@ h1 {
     color: #0756A3; 
     font-size: 1.9rem; 
     line-height: 2.3rem;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding-bottom: 500px;
+    padding-top: 500px;
 } 
 h2 { 
     color: #2469A6; 
@@ -58,9 +58,9 @@ h6 {
     line-height: 1rem; 
 } 
 p { 
-  line-height: 1.2px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  line-height: 120px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 
 } 
 ol li { 
