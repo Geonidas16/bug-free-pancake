@@ -28,46 +28,47 @@ i {
 } 
 h1 { 
     color: #0756A3; 
-    font-size: 1.9rem; 
+    font-size: 2.0rem; 
     line-height: 2.3rem;
     padding-bottom: 20px;
     padding-top: 25px;
 } 
 h2 { 
     color: #2469A6; 
-    font-size: 1.4rem; 
+    font-size: 1.7rem; 
     line-height: 1.4rem;
     padding-bottom: 20px;
     padding-top: 25px; 
 } 
 h3 { 
     color: #5E92BF; 
-    font-size: 1.2rem; 
+    font-size: 1.5rem; 
     line-height: 1.2rem;
     padding-bottom: 20px;
     padding-top: 25px;
 } 
 h4 { 
-    font-size: 1rem; 
+    font-size: 1.2rem; 
     line-height: 1rem;
     padding-bottom: 20px;
     padding-top: 25px;
 } 
 h5 { 
     color: #888B8C; 
-    font-size: 0.9rem; 
+    font-size: 1.1rem; 
     line-height: 1rem;
     padding-bottom: 20px;
     padding-top: 25px;
 } 
 h6 { 
     color: #99A9A8; 
-    font-size: 0.9rem; 
+    font-size: 1.1rem; 
     line-height: 1rem;
     padding-bottom: 20px;
     padding-top: 25px;
 } 
 p { 
+  font-size: 1.4rem;
   line-height: 25px;
   padding-top: 7px;
   padding-bottom: 7px;
