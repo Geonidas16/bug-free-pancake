@@ -96,10 +96,6 @@ header {
   margin-bottom: 40px;
 }
 
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
 
 /* Navigation */
 nav {
@@ -571,6 +567,11 @@ footer {
 
 .example_content {
     padding-left: 10px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sticky_note {
